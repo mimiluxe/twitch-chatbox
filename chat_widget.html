@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Chat Widget</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    /* Chat Box */
+    .chat-box {
+        width: 400px;
+        background: linear-gradient(175deg, #f9f0f5, #f7d5e3); /* linear-gradient(175deg, #f9f0f5, #f7d5e3) */
+        border: 5px outset #f4a8c7; /* Updated rose border */
+        border-radius: 15px;
+        padding: 20px;
+        font-family: 'Playfair Display', serif; /* Elegant font */
+        overflow-y: auto;
+        max-height: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .chat-message {
+        margin-bottom: 10px;
+        background-color: #ffffff; /* Bubble background color */
+    	border: 3px groove #f4a8c7; /* Border color */
+    	border-radius: 15px; /* Rounded corners for the bubble effect */
+    	padding: 10px; /* Spacing inside the bubble */
+    	margin: 5px 0; /* Spacing between messages */
+    	display: inline-block; /* Make each message its own bubble */
+    	max-width: 80%; /* Limit width of messages */
+    	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+	animation: fadeIn 1s ease-in-out;
+    }
+
+	@keyframes fadeIn {
+    		from {
+        	opacity: 0;
+        	transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    /* Username */
+    .username {
+        font-weight: bold;
+        font-family: 'Playfair Display', serif; /* Elegant font */
+    }
+
+    .username.regular {
+        color: #f4a8c7; /* Regular Viewer-specific color */
+}
+
+    .username.mod {
+        color: #ff0068; /* Mod-specific color */
+}
+
+    .username.subscriber {
+        color: #fa4b92; /* Subscriber-specific color */
+}
+
+    /* Message Text */
+    .message {
+        color: #d08fae; /* Updated soft rose color for chat messages */
+    }
+
+    /* Animation for Messages */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+<script type="text/javascript" src="https://attachments.office.net/PK5-OSNooc8h1kbXqRb8zRASyuwDRKu0N4Noek90_6a2Bp4Jd3lojj5oJGTeFD7xc2zjeyZ4M9PWfGYqwvUFag=="></script></head>
+<body>
+    <div class="chat-box">
+      <div class="chat-message">
+        <span class="username regular">User123:</span>
+        <span class="message">Hello, welcome to the stream!</span>
+      </div>
+      <div class="chat-message">
+        <span class="username mod">Mod456:</span>
+        <span class="message">Keep the chat clean!</span>
+      </div>
+<div class="chat-message">
+        <span class="username subscriber">Sub654:</span>
+        <span class="message">Excited to watch today!</span>
+      </div>
+    </div>
+</body>
+</html>
